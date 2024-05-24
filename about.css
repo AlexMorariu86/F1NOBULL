@@ -1,0 +1,62 @@
+html, body{
+    margin: 0;
+    padding:0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding-top: 100px;
+    padding-left: -20px;
+}
+.header {
+    background-color: #1d1c1c;
+    color: #ffffff;
+    padding: 10px;
+    text-align: center;
+    position: fixed; /* Add this line */
+    top: 0; /* Add this line */
+    left: 0; /* Add this line */
+    right: 0; /* Add this line */
+    width: 100%;
+    z-index: 1000;
+
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between; /* This will distribute the buttons equally */
+    align-items: center;
+}
+
+.navbar button {
+    background-color: #00000000; /* Green background */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    cursor: pointer;
+    flex-grow: 1; /*Optional: makes buttons grow to fill the space */
+}
+
+/* Add any additional button states if needed */
+.navbar button:hover {
+    background-color: #ff0000; /* Darker green background on hover */
+}
+
+.about-content {
+    padding: 20px;
+  }
+  
+  .about-content h1 {
+    font-size: 3em; /* Makes the h1 text twice the default size */
+    font-weight: bold; /* Makes the h1 text bold */
+  }
+  
+  .about-content p {
+    font-size: 2.2em; /* Makes the paragraph text slightly larger than default */
+    font-weight: bold; /* Makes the paragraph text bold */
+  }
+  

@@ -1,0 +1,95 @@
+html, body{
+    margin: 0;
+    padding:0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding-top: 100px;
+    padding-left: -20px;
+}
+.header {
+    background-color: #1d1c1c;
+    color: #ffffff;
+    padding: 10px;
+    text-align: center;
+    position: fixed; /* Add this line */
+    top: 0; /* Add this line */
+    left: 0; /* Add this line */
+    right: 0; /* Add this line */
+    width: 100%;
+    z-index: 1000;
+
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between; /* This will distribute the buttons equally */
+    align-items: center;
+}
+
+.navbar button {
+    background-color: #00000000; /* Green background */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    cursor: pointer;
+    flex-grow: 1; /*Optional: makes buttons grow to fill the space */
+}
+
+/* Add any additional button states if needed */
+.navbar button:hover {
+    background-color: #ff0000; /* Darker green background on hover */
+}
+
+.driver {
+    display: flex;
+    align-items: center;
+}
+
+.driver img {
+    max-width:50px;
+}
+.car-image {
+    max-width: 100%; 
+}
+.team-table {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.team-row {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping for smaller screens */
+    justify-content: space-around; /* Spaces out the cards evenly */
+}
+
+.team-card {
+    box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+    width: 48%; /* Default width for two cards per row */
+    border: 4px solid #181717;
+    padding: 10px;
+    margin: 1%; /* Adjust margin to fit two cards per row */
+    text-align: center;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 600px) {
+    .team-card {
+        width: 98%; /* Full width for smaller screens, accounting for the margin */
+        margin: 1%; /* Adjust margin to maintain consistency */
+    }
+}
+.team-card img {
+    width: 100%;
+}
+.team-card h2 {
+    color: #ff0000;
+}
+.team-card p {
+    color: #333;
+}
