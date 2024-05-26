@@ -1,0 +1,72 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+    padding-top:80px;
+}
+.container {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.driver {
+    text-align: center;
+    width: 45%;
+}
+.driver img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+.driver-details {
+    margin-top: 10px;
+    text-align: left;
+}
+.header {
+    background-color: #1d1c1c;
+    color: #ffffff;
+    padding: 10px;
+    text-align: center;
+    position: fixed; /* Add this line */
+    top: 0; /* Add this line */
+    left: 0; /* Add this line */
+    right: 0; /* Add this line */
+    width: 100%;
+    z-index: 1000;
+    box-shadow:0 2px 4 px rgba(0,0,0,0.1);
+
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between; /* This will distribute the buttons equally */
+    align-items: center;
+    padding:0 20px;
+    height:100%;
+}
+
+.navbar button {
+    background-color: #00000000; /* Green background */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    cursor: pointer;
+    flex-grow: 1;
+    margin-left:10px;
+}
+
+/* Add any additional button states if needed */
+.navbar button:hover {
+    background-color: #ff0000; /* Darker green background on hover */
+}

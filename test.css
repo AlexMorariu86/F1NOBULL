@@ -1,0 +1,89 @@
+body {
+  margin: 0;
+}
+
+.header {
+  background-color: #1d1c1c;
+  color: #ffffff;
+  padding: 10px;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between; /* This will distribute the buttons equally */
+  align-items: center;
+}
+
+.navbar button {
+  background-color: #00000000; /* Green background */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  cursor: pointer;
+  flex-grow: 1;
+}
+
+.navbar button:hover {
+  background-color: #ff0000;
+}
+
+.red-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #1d1c1c;
+  animation: reveal-content 1s ease-in-out forwards;
+  animation-delay: 2s; /* Start animation after 3 seconds */
+  z-index: 1001; /* Lower z-index to be behind the logo */
+}
+
+.content-container {
+  overflow: visible; /* Allow content to be visible after animation */
+}
+
+@keyframes f1-logo-animation {
+  from {
+    opacity: 0;
+  } /* Logo starts invisible */
+  to {
+    opacity: 1;
+  } /* Logo fades in to full opacity */
+}
+
+.f1-logo-animation {
+  animation: f1-logo-animation 1s ease-in forwards, disappear 1s ease-in-out forwards;
+  animation-delay: 1s; /* Disappear animation starts after 1s (red-overlay duration) */
+  position: relative;
+  z-index: 1111; /* Higher z-index to be displayed on top of the overlay */
+}
+
+@keyframes disappear {
+  from {
+    opacity: 1;
+  } /* Logo starts fully visible */
+  to {
+    opacity: 0;
+  } /* Logo fades out to transparent */
+}
+
+@keyframes reveal-content {
+  from {
+    height: 100%;
+  }
+  to {
+    height: 0%;
+  }
+}
