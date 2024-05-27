@@ -1,6 +1,30 @@
+.driver {
+  text-align: center;
+  width: 45%;
+}
+.driver img {
+  width: 100%;  /* Stretch image to container width */
+  height: 100%; /* Stretch image to container height */
+  background-image: url("images/winnermonaco.png");
+  background-repeat: repeat;  /* Prevent image repetition */
+  background-position: center;  /* Center image within container */
+  background-size: cover;       /* Ensure image covers the entire container */
+  z-index: 10;
+  outline: 5px #1d1c1c;
+}
 body {
   margin: 0;
+  z-index: 9;
+  padding: 100px 0; /* Adjust padding if needed */
 }
+
+.driver::after {
+  display: block;  /* Make it occupy space on the line */
+  position: absolute;  /* Position it absolutely within .driver */
+  right: 20px;  /* Position it to the right with some margin */
+  top: 50%;  /* Center text vertically */
+}
+
 
 .header {
   background-color: #1d1c1c;
@@ -39,36 +63,9 @@ body {
   background-color: #ff0000; 
 }
 
-.red-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #1d1c1c;
-  animation: reveal-content 1s ease-in-out forwards;
-  animation-delay: 3s; /* Start animation after 3 seconds */
-  z-index:1001;
-}
 
 .content-container {
   overflow: visible; /* Allow content to be visible after animation */
 }
 
-@keyframes reveal-content {
-  from {
-    height: 100%;
-  }
-  to {
-    height: 0%;
-  }
-}
 
-@keyframes f1-logo-animation {
-  from { opacity: 0; } /* Logo starts invisible */
-  to { opacity: 1; } /* Logo fades in to full opacity */
-}
-
-.navbar a img {
-  animation: f1-logo-animation 1s ease-in forwards; 
-}
