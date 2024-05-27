@@ -3,26 +3,20 @@
   width: 45%;
 }
 .driver img {
-  width: 100%;  /* Stretch image to container width */
-  height: 100%; /* Stretch image to container height */
+  width: 100%;  
+  height: 100%; 
   background-image: url("images/winnermonaco.png");
-  background-repeat: repeat;  /* Prevent image repetition */
+  background-repeat: no-repeat;  /* Prevent image repetition */
   background-position: center;  /* Center image within container */
-  background-size: cover;       /* Ensure image covers the entire container */
+  background-size: cover;  
+  object-fit:cover;
   z-index: 10;
-  outline: 5px #1d1c1c;
 }
+
 body {
   margin: 0;
   z-index: 9;
   padding: 100px 0; /* Adjust padding if needed */
-}
-
-.driver::after {
-  display: block;  /* Make it occupy space on the line */
-  position: absolute;  /* Position it absolutely within .driver */
-  right: 20px;  /* Position it to the right with some margin */
-  top: 50%;  /* Center text vertically */
 }
 
 
