@@ -1,24 +1,13 @@
-.driver {
-  text-align: center;
-  width: 45%;
-}
-.driver img {
-  width: 100%;  
-  height: 100%; 
-  background-image: url("images/winnermonaco.png");
-  background-repeat: no-repeat;  /* Prevent image repetition */
-  background-position: center;  /* Center image within container */
-  background-size: cover;  
-  object-fit:cover;
-  z-index: 10;
-}
-
 body {
   margin: 0;
-  z-index: 9;
-  padding: 100px 0; /* Adjust padding if needed */
+  padding: 0;
+  height: 100vh; /* Full viewport height */
+  background-image: url("images/background.jpg");
+  background-repeat: no-repeat; /* Prevent image repetition */
+  background-position: center; /* Center image within container */
+  background-size: cover;
+  z-index: 10;
 }
-
 
 .header {
   background-color: #1d1c1c;
@@ -26,12 +15,11 @@ body {
   padding: 10px;
   text-align: center;
   position: fixed;
-  top: 0; 
-  left: 0; 
-  right: 0; 
+  top: 0;
+  left: 0;
+  right: 0;
   width: 100%;
   z-index: 1000;
-
 }
 
 .navbar {
@@ -41,7 +29,7 @@ body {
 }
 
 .navbar button {
-  background-color: #00000000; /* Green background */
+  background-color: #00000000; /* Transparent background */
   border: none;
   color: white;
   padding: 10px 20px;
@@ -50,16 +38,33 @@ body {
   display: inline-block;
   font-size: 20px;
   cursor: pointer;
-  flex-grow: 1; 
+  flex-grow: 1;
 }
 
 .navbar button:hover {
-  background-color: #ff0000; 
+  background-color: #ff0000;
+  border:60px;
+  border-radius: 0%;
 }
 
-
 .content-container {
+  margin-top: 80px; /* Adjust this value based on the height of the header */
   overflow: visible; /* Allow content to be visible after animation */
 }
 
+#countdown {
+  position: fixed;
+  bottom: 20px;
+  left:20px;
+  font-size: 2em;
+  color: white;
+  z-index:1000;
+}
 
+#countdown-timer {
+  /*display: inline-block;*/
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+  z-index:1000;
+}

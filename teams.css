@@ -5,32 +5,26 @@ html, body{
 @import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 @font-face {
-    font-family: 'race-sport'; /* Name your font */
-    src: url('race-sport.ttf') format('ttf'),  /* Preferred format */ 
-  }
-@font-face {
-    font-family: 'Directive-Four-Bold';
-    src:url('Directive-Four-Bold.ttf.woff') format('woff'),
-        url('Directive-Four-Bold.ttf.svg#Directive-Four-Bold') format('svg'),
-        url('Directive-Four-Bold.ttf.eot'),
-        url('Directive-Four-Bold.ttf.eot?#iefix') format('embedded-opentype'); 
+    font-family: 'f1font';
+    src: url('f1font.woff2') format('woff2'),  /* Prefer woff2 if available */
+         url('f1font.ttf') format('truetype');  /* Fallback to ttf */
     font-weight: normal;
     font-style: normal;
-}
+  }
 
 body {
-    font-family: 'Poppins', Arial, sans-serif;
+    font-family: 'f1font', Arial, sans-serif;
     padding-top: 100px;
     padding-left: -20px;
 }
 
 p{
-    font-family: 'Directive-Four-Bold';
+    font-family: 'f1font';
 }
 
 h1 {
     font-size: 2rem;
-    font-family: 'race-sport', Arial, sans-serif;
+    font-family: 'f1font', Arial, sans-serif;
     color: #000000 
   }
 
@@ -65,13 +59,15 @@ h1 {
     font-size: 20px;
     cursor: pointer;
     flex-grow: 1; /*Optional: makes buttons grow to fill the space */
+    position: relative; /* Required for pseudo-element positioning */
+    overflow: hidden;
 }
+  
 
 /* Add any additional button states if needed */
 .navbar button:hover {
-    background-color: #ff0000; /* Darker green background on hover */
+    background-color: #ff0000; 
 }
-
 .driver {
     display: flex;
     align-items: center;
@@ -97,15 +93,19 @@ h1 {
 .team-card {
     box-sizing: border-box; /* Includes padding and border in the element's total width and height */
     width: 48%; /* Default width for two cards per row */
-    border: 2px solid #181717;
+    /*border: 2px solid #181717;*/
     padding: 10px;
     margin: 1%; /* Adjust margin to fit two cards per row */
     text-align: center;
+    transform: translate(5px, -2px); /* Adjust values for desired movement */
+    transition: transform 0.2s ease-in-out;
 }
 .team-card:hover {
     /* Hover effect styles */
-    background-color: #bfbfbf; /* Slightly lighter background on hover */
+    background-color: #dddddd; /* Slightly lighter background on hover */
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow on hover */
+    transform: translate(15px, -10px); /* Adjust values for desired movement */
+    transition: transform 0.2s ease-in-out;
   }
 .team-card a {
     text-decoration: none; /* Remove underline */
@@ -123,11 +123,11 @@ h1 {
 }
 .team-card h2 {
     color: #000000;
-    font-family: 'Martian Mono', monospace; /* Martian Mono preferred, fallback to monospace */
+    font-family: 'f1font', monospace; /* Martian Mono preferred, fallback to monospace */
       
 }
 
 .team-card p {
     color: #010203;
-    font-family: 'Directive-Four-Bold';
+    font-family: 'f1font';
 }
