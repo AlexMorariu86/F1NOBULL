@@ -19,6 +19,7 @@ body {
 .driver {
     text-align: center;
     width: 45%;
+    box-sizing: border-box; /* Add this line */
 }
 .driver img {
     width: 100%;
@@ -53,7 +54,7 @@ body {
 }
 
 .navbar button {
-    background-color: #00000000; /* Green background */
+    background-color: #00000000;
     border: none;
     color: white;
     padding: 10px 20px;
