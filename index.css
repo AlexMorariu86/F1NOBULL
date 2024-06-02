@@ -1,12 +1,12 @@
 body {
+  @font-face{
+    font-family: "f1font", Arial, Helvetica, sans-serif;
+  }
   margin: 0;
   padding: 0;
-  height: 100vh; /* Full viewport height */
-  background-image: url("images/background.jpg");
-  background-repeat: no-repeat; /* Prevent image repetition */
-  background-position: center; /* Center image within container */
-  background-size: cover;
-  z-index: 10;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column; /* Stack content vertically */
 }
 
 .header {
@@ -45,19 +45,37 @@ body {
   background-color: #ef0001;
 }
 
+.image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover; /* This resizes the image to fit the container */
+  z-index:-1;
+}
+
+/* Footer styles */
+footer {
+  font-family:'f1font', Arial;
+  text-align: center;
+  padding: 20px;
+  background-color: #1d1c1c;
+  color: #ffffff;
+  margin-top: auto; /* Push the footer to the bottom */
+}
 
 #countdown {
-  bottom: 20px;
-  text-align: center;
-  font-size: 2em;
-  color: white;
-  z-index:1000;
+  font-size: 3em;
+  padding: 20px;
+  border-radius: 10px;
+  display: inline-block; /* Center the countdown timer */
+  margin: 0 auto; /* Center the countdown timer horizontally */
 }
 
 #countdown-timer {
   /*display: inline-block;*/
   font-family: 'f1font', Arial, sans-serif;
-  background-color: rgba(0, 0, 0, 0.5);
   padding: 20px;
   border-radius: 10px;
   z-index:1000;
