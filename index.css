@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'f1font';
-  src: url('../f1font.ttf') format('truetype');
+  src: url('/f1font.ttf') format('truetype');
 }
 
 body {
