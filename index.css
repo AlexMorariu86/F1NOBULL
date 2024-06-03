@@ -1,12 +1,15 @@
+@font-face {
+  font-family: 'f1font';
+  src: url('../f1font.ttf') format('truetype');
+}
+
 body {
-  @font-face{
-    font-family: "f1font", Arial, Helvetica, sans-serif;
-  }
+  font-family: 'f1font', Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
   display: flex;
-  min-height: 100vh;
   flex-direction: column; /* Stack content vertically */
+  min-height: 100vh;
 }
 
 .header {
@@ -45,21 +48,58 @@ body {
   background-color: #ef0001;
 }
 
-.image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  object-fit: cover; /* This resizes the image to fit the container */
-  z-index:-1;
+.content {
+  flex: 1; /* This makes the content area take up the remaining space */
+  position: relative;
 }
+
+.image {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* This resizes the image to fit the container */
+}
+
+.info-section {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  margin-top:150px;
+  margin-bottom:150px; /* Adjust the pixel value for desired space */
+}
+
+
+.small-image {
+  width: 600px; /* Adjust the size of the small image */
+  height: auto;
+  margin-right: 20px; /* Space between the image and the paragraph */
+}
+
+.info-paragraph {
+  font-size: 2em;
+  color: #333;
+}
+
+.info-section-2 {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  justify-content: flex-end; /* Align children to the right */
+}
+
+.info-section-2 .small-image {
+  margin-left: auto; /* Control spacing to the left of the image */
+}
+
+
+
 
 /* Footer styles */
 footer {
-  font-family:'f1font', Arial;
+  font-family: 'f1font', Arial;
   text-align: center;
-  padding: 20px;
+  padding: 5px 10px;
   background-color: #1d1c1c;
   color: #ffffff;
   margin-top: auto; /* Push the footer to the bottom */
@@ -74,9 +114,11 @@ footer {
 }
 
 #countdown-timer {
-  /*display: inline-block;*/
   font-family: 'f1font', Arial, sans-serif;
   padding: 20px;
   border-radius: 10px;
-  z-index:1000;
+}
+
+#countdown-timer p {
+  font-size: 0.6em; /* Adjust this value to make the text smaller */
 }
