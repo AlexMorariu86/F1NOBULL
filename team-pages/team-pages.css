@@ -1,5 +1,10 @@
+@font-face {
+    font-family: 'f1font';
+    src: url('../f1font.ttf') format('truetype');
+  }
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'f1font', Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
