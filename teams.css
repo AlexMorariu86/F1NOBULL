@@ -6,8 +6,7 @@ html, body{
 
 @font-face {
     font-family: 'f1font';
-    src: url('f1font.woff2') format('woff2'),  /* Prefer woff2 if available */
-         url('/fonts/f1font.ttf') format('truetype');  /* Fallback to ttf */
+    src: url('/fonts/f1font.ttf') format('truetype');  /* Fallback to ttf */
     font-weight: normal;
     font-style: normal;
   }
