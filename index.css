@@ -89,11 +89,32 @@ body {
 }
 
 .info-section-2 .small-image {
+  width: 600px; /* Adjust the size of the small image */
+  height: auto;
+  margin-right: 20px; /* Space between the image and the paragraph */
   margin-left: auto; /* Control spacing to the left of the image */
+  order: 2;
 }
 
+.info-section-2 p {
+  order: 1;
+}
 
+.info-section-3 {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  justify-content: flex-end; /* Align children to the right */
+}
 
+.info-section-3 .small-image {
+  width: 600px; /* Adjust the size of the small image */
+  height: auto;
+  margin-right: 20px; /* Space between the image and the paragraph */
+  margin-left: auto;
+}
 
 /* Footer styles */
 footer {
